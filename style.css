@@ -1,0 +1,60 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+}
+
+/* Suggestions List */
+ul {
+    position: absolute;
+    width: 100%;
+    background: white;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+ul li:hover, ul .selected {
+    background: #667eea;
+    color: white;
+}
